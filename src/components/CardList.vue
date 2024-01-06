@@ -1,6 +1,6 @@
-<template lang="">
+<template>
     <section id='card' class="container">
-            <article v-for="card in CardList" :key="card.data">
+            <article v-for="card in this.cardList" :key="card.id">
                 <SingleCard :card="card" />
             </article>
     </section>
@@ -13,7 +13,7 @@ export default {
     name: 'CardList',
     data() {
         return {
-            CardList: [],
+            cardList: [],
         }
     },
 

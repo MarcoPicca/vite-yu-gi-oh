@@ -1,3 +1,14 @@
+<script>
+import CardList from './CardList.vue';
+
+export default {
+    name: 'AppMain',
+    components: {
+        CardList,
+    }
+}
+</script>
+
 <template>
     <main class="container-main">
         <div class="container-btn-main">
@@ -11,16 +22,6 @@
     </main>
 </template>
 
-<script>
-import CardList from './CardList.vue';
-
-export default {
-    name: 'AppMain',
-    components: {
-        CardList,
-    }
-}
-</script>
 
 <style lang="scss">
     

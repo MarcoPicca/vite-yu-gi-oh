@@ -17,29 +17,30 @@ export default {
     }
   },
   methods: {
-    // https://images.ygoprodeck.com/images/cards_small
+
     getCards(){
       axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
       .then((response) => {
         console.log(response);
-        this.card = response.data.results;
+        this.cardList = response.data.data;
       })
-      // CREDO CHE IL PROBLEMA SIA QUI SOPRA TROVANDO DATA DOPPIAMENTE INDICATO NELL'ARRAY DI RISPOSTA
+
       .catch(function (error) {
         console.error(error);
       });
     }
   },
+
   created() {
     this.getCards();
   },
+
 }
 </script>
 
 <template>
   <AppHeader />
     <main>
-      <CardList />
       <AppMain />  
     </main>
 </template>
